@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">QuickHPU</string>
+    <string name="main_gridview_title_grade">查询成绩</string>
+    <string name="main_gridview_title_classroom">空教室</string>
+    <string name="main_gridview_title_pingjiao">一键评教</string>
+    <string name="main_gridview_title_manager">班级管理</string>
+    <string name="main_gridview_title_lesson">选课</string>
+    <string name="main_gridview_title_sport">体能测试</string>
+    <string name="main_gridview_title_sign">课堂点名</string>
+    <string name="main_gridview_title_calender">校历</string>
+    <string name="main_gridview_title_test">考试安排</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

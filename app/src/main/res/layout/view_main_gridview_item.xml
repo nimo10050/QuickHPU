@@ -1,0 +1,26 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="106dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="#fdb701">
+
+    <ImageView
+        android:id="@+id/main_gridview_item_image"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/ic_launcher_background"
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY" />
+
+    <TextView
+        android:id="@+id/main_gridview_item_title"
+        android:text="内容"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="3dp"
+        android:textColor="#00f"
+        android:textSize="22sp" />
+
+</LinearLayout>
