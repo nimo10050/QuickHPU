@@ -13,10 +13,10 @@ import com.iot.quickhpu.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class LessonFragment extends Fragment {
+public class ClassScheduleFragment extends Fragment {
 
 
-    public LessonFragment() {
+    public ClassScheduleFragment() {
         // Required empty public constructor
     }
 
@@ -24,8 +24,12 @@ public class LessonFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_lesson, container, false);
+
+        View view=  inflater.inflate(R.layout.fragment_class_schedule, container, false);
+        // 课程表
+
+
+        return view;
     }
 
 }

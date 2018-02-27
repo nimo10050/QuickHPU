@@ -27,7 +27,7 @@ public class MainGridViewAdapter extends BaseAdapter {
 
     @Override
     public int getCount() {
-        return gridViewItemTitles.length;
+        return 0;
     }
 
     @Override
@@ -46,7 +46,7 @@ public class MainGridViewAdapter extends BaseAdapter {
             convertView = LayoutInflater.from(mContext).inflate(R.layout.view_main_gridview_item, viewGroup, false);
             TextView textView = convertView.findViewById(R.id.main_gridview_item_title);
             ImageView imageView = convertView.findViewById(R.id.main_gridview_item_image);
-            textView.setText(gridViewItemTitles[position]);
+            //textView.setText(gridViewItemTitles[position]);
             imageView.setImageResource(gridViewItemImages[position]);
         }
         return convertView;
@@ -59,12 +59,12 @@ public class MainGridViewAdapter extends BaseAdapter {
             R.drawable.ic_launcher_background
     };
 
-    private int[] gridViewItemTitles = {
+    /*private int[] gridViewItemTitles = {
             R.string.main_gridview_title_grade,R.string.main_gridview_title_classroom,
             R.string.main_gridview_title_calender,R.string.main_gridview_title_lesson,
             R.string.main_gridview_title_manager,R.string.main_gridview_title_pingjiao,
             R.string.main_gridview_title_sign,R.string.main_gridview_title_sport,
             R.string.main_gridview_title_test
-    };
+    };*/
 
 }

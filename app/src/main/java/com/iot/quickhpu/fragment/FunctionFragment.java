@@ -18,20 +18,20 @@ import com.iot.quickhpu.adapter.MainGridViewAdapter;
  * @日期 2018/2/21
  * @描述 主页Fragment
  */
-public class HomeFragment extends Fragment {
+public class FunctionFragment extends Fragment {
 
-    public HomeFragment() {
+    public FunctionFragment() {
 
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home, container, false);
-        Activity context = this.getActivity();
+        View view = inflater.inflate(R.layout.fragment_function, container, false);
+       /* Activity context = this.getActivity();
         // 主页菜单栏
         GridView mainGridView = view.findViewById(R.id.main_gridview);
-        mainGridView.setAdapter(new MainGridViewAdapter(context));
+        mainGridView.setAdapter(new MainGridViewAdapter(context));*/
         return view;
     }
 

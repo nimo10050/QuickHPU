@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:showDividers="end"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:paddingLeft="20dp"
+            android:gravity="center_vertical">
+            <View
+                android:background="@color/decorate_blue"
+                android:layout_width="5dp"
+                android:layout_height="20dp">
+            </View>
+            <TextView
+                android:text="@string/fun_title_study"
+                android:layout_marginLeft="10dp"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            >
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                    <TextView
+                        android:text="查询成绩"
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:text="空教室"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:text="图书馆"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical">
+                <ImageView
+                    android:src="@mipmap/ic_launcher"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp" />
+                <TextView
+                    android:text="体能测试"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:paddingLeft="20dp"
+        android:gravity="center_vertical">
+        <View
+            android:background="@color/decorate_red"
+            android:layout_width="5dp"
+            android:layout_height="20dp">
+        </View>
+        <TextView
+            android:text="@string/fun_title_tools"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        >
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:text="课堂点名"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_marginLeft="18dp"
+            android:orientation="vertical">
+            <ImageView
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:text="班级管理"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

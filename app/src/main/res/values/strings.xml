@@ -1,15 +1,23 @@
 <resources>
+    <!--app 名称-->
     <string name="app_name">QuickHPU</string>
-    <string name="main_gridview_title_grade">查询成绩</string>
-    <string name="main_gridview_title_classroom">空教室</string>
-    <string name="main_gridview_title_pingjiao">一键评教</string>
-    <string name="main_gridview_title_manager">班级管理</string>
-    <string name="main_gridview_title_lesson">选课</string>
-    <string name="main_gridview_title_sport">体能测试</string>
-    <string name="main_gridview_title_sign">课堂点名</string>
-    <string name="main_gridview_title_calender">校历</string>
-    <string name="main_gridview_title_test">考试安排</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
+    <!--底部导航栏文字说明-->
+    <string name="nav_title_class_schedule">课程表</string>
+    <string name="nav_title_quanzi">话题圈</string>
+    <string name="nav_title_function">发现</string>
+    <string name="nav_title_myself">我的</string>
+    <!--功能页功能分类标题-->
+    <string name="fun_title_study">学习相关</string>
+    <string name="fun_title_tools">工具</string>
+    <!--功能页功能按钮-->
+    <string name="fun_list_grade">查询成绩</string>
+    <string name="fun_list_emptyroom">空教室</string>
+    <string name="fun_list_pingjiao">一键评教</string>
+    <string name="fun_list_manager">班级管理</string>
+    <string name="fun_list_lesson">选课</string>
+    <string name="fun_list_sport">体能测试</string>
+    <string name="fun_list_sign">课堂点名</string>
+    <string name="fun_list_calender">校历</string>
+    <string name="fun_list_test">考试安排</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
