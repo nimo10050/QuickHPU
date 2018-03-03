@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.iot.quickhpu.activity.MainActivity">
+    <!--内容页-->
     <FrameLayout
         android:id="@+id/fragment_content"
         android:layout_width="match_parent"
@@ -12,98 +13,5 @@
         android:layout_weight="1">
     </FrameLayout>
     <!--底部导航栏-->
-    <View
-        android:background="@color/divider_gray"
-        android:layout_width="match_parent"
-        android:layout_height="1dp">
-    </View>
-    <LinearLayout
-        android:divider="#f00"
-        android:background="#fff"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal">
-        <LinearLayout
-            android:id="@+id/ll_nav_class_schedule"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/iv_nav_class_schedule"
-                android:layout_width="23dp"
-                android:layout_height="23dp"
-                android:src="@mipmap/nav_class_schedule"/>
-            <TextView
-                android:id="@+id/tv_nav_class_schedule"
-                android:layout_width="wrap_content"
-                android:layout_height="23dp"
-                android:gravity="center"
-                android:text="@string/nav_title_class_schedule" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ll_nav_quanzi"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/iv_nav_quanzi"
-                android:layout_width="23dp"
-                android:layout_height="23dp"
-                android:src="@mipmap/nav_quanzi"/>
-            <TextView
-                android:id="@+id/tv_nav_quanzi"
-                android:layout_width="wrap_content"
-                android:layout_height="23dp"
-                android:gravity="center"
-                android:text="@string/nav_title_quanzi" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ll_nav_func"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/iv_nav_func"
-                android:layout_width="23dp"
-                android:layout_height="23dp"
-                android:src="@mipmap/nav_function"/>
-            <TextView
-                android:id="@+id/tv_nav_func"
-                android:layout_width="wrap_content"
-                android:layout_height="23dp"
-                android:gravity="center"
-                android:text="@string/nav_title_function" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:id="@+id/ll_nav_myself"
-            android:layout_weight="1"
-            android:layout_width="0dp"
-            android:orientation="vertical"
-            android:gravity="center"
-            android:layout_height="match_parent">
-            <ImageView
-                android:id="@+id/iv_nav_myself"
-                android:layout_width="23dp"
-                android:layout_height="23dp"
-                android:src="@mipmap/nav_myself"/>
-            <TextView
-                android:id="@+id/tv_nav_myself"
-                android:layout_width="wrap_content"
-                android:layout_height="23dp"
-                android:gravity="center"
-                android:text="@string/nav_title_myself" />
-        </LinearLayout>
-
-    </LinearLayout>
-
-
+    <include layout="@layout/view_bottom_nav"/>
 </LinearLayout>

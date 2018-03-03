@@ -13,12 +13,16 @@ import android.widget.Toast;
 import com.iot.quickhpu.R;
 import com.iot.quickhpu.fragment.FunctionFragment;
 import com.iot.quickhpu.fragment.ClassScheduleFragment;
+import com.iot.quickhpu.fragment.InfoFragment;
+import com.iot.quickhpu.fragment.QuanziFragment;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     // 容器页面
     private FunctionFragment funcFragment = new FunctionFragment();
     private ClassScheduleFragment classScheduleFragment = new ClassScheduleFragment();
+    private InfoFragment infoFragment = new InfoFragment();
+    private QuanziFragment quanziFragment = new QuanziFragment();
     private Fragment currentFragment = new Fragment();
 
     // 底部导航栏文字
@@ -43,26 +47,31 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         initView();
         initEvent();
-        showFragment(funcFragment).commit();
+        showFragment(classScheduleFragment).commit();
     }
 
     //
     private void initView() {
-         classScheduleNav = this.findViewById(R.id.ll_nav_class_schedule);
-         quanziNav = this.findViewById(R.id.ll_nav_quanzi);
-         funcNav = this.findViewById(R.id.ll_nav_func);
-         infoNav = this.findViewById(R.id.ll_nav_myself);
+        classScheduleNav = this.findViewById(R.id.ll_nav_class_schedule);
+        quanziNav = this.findViewById(R.id.ll_nav_quanzi);
+        funcNav = this.findViewById(R.id.ll_nav_func);
+        infoNav = this.findViewById(R.id.ll_nav_myself);
 
         funcTextView = this.findViewById(R.id.tv_nav_func);
         classScheduleTextView = this.findViewById(R.id.tv_nav_class_schedule);
         quanziTextView = this.findViewById(R.id.tv_nav_quanzi);
         infoTextView = this.findViewById(R.id.tv_nav_myself);
 
-         classScheduleImg = this.findViewById(R.id.iv_nav_class_schedule);
-         quanziImg= this.findViewById(R.id.iv_nav_quanzi);
-         funcImg= this.findViewById(R.id.iv_nav_func);
-         infoImg= this.findViewById(R.id.iv_nav_myself);
+        classScheduleImg = this.findViewById(R.id.iv_nav_class_schedule);
 
+
+        quanziImg = this.findViewById(R.id.iv_nav_quanzi);
+        funcImg = this.findViewById(R.id.iv_nav_func);
+        infoImg = this.findViewById(R.id.iv_nav_myself);
+
+        initImageColor();
+        int nav_selected_color = getResources().getColor(R.color.nav_selected_color);
+        classScheduleImg.setColorFilter(nav_selected_color);
     }
 
     // 初始化监听器
@@ -72,29 +81,43 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         funcNav.setOnClickListener(this);
         infoNav.setOnClickListener(this);
     }
+
     // 点击事件
     @Override
     public void onClick(View view) {
-
-        switch (view.getId()){
-            case R.id.tv_nav_func:
+        initImageColor();
+        int nav_selected_color = getResources().getColor(R.color.nav_selected_color);
+        switch (view.getId()) {
+            case R.id.ll_nav_func:
+                funcImg.setColorFilter(nav_selected_color);
                 showFragment(funcFragment).commit();
                 break;
-            case R.id.tv_nav_class_schedule:
+            case R.id.ll_nav_class_schedule:
+                classScheduleImg.setColorFilter(nav_selected_color);
                 showFragment(classScheduleFragment).commit();
                 break;
-            case R.id.tv_nav_quanzi:
-                Toast.makeText(this,"小圈子",Toast.LENGTH_SHORT).show();
+            case R.id.ll_nav_quanzi:
+                quanziImg.setColorFilter(nav_selected_color);
+                showFragment(quanziFragment).commit();
                 break;
-            case R.id.tv_nav_myself:
-                Toast.makeText(this,"个人",Toast.LENGTH_SHORT).show();
+            case R.id.ll_nav_myself:
+                infoImg.setColorFilter(nav_selected_color);
+                showFragment(infoFragment).commit();
                 break;
         }
 
     }
-
+    // 初始化图片颜色
+    private void initImageColor() {
+        int nav_unselected_color = getResources().getColor(R.color.nav_unselected_color);
+        classScheduleImg.setColorFilter(nav_unselected_color);
+        funcImg.setColorFilter(nav_unselected_color);
+        infoImg.setColorFilter(nav_unselected_color);
+        quanziImg.setColorFilter(nav_unselected_color);
+    }
     /**
      * 展示指定Fragment
+     *
      * @param targetFragment
      * @return
      */
@@ -102,11 +125,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         if (!targetFragment.isAdded()) {
-             //第一次使用showFragment()时currentFragment为null，所以要判断一下
+            //第一次使用showFragment()时currentFragment为null，所以要判断一下
             if (currentFragment != null) {
                 transaction.hide(currentFragment);
             }
-            transaction.add(R.id.fragment_content, targetFragment,targetFragment.getClass().getName());
+            transaction.add(R.id.fragment_content, targetFragment, targetFragment.getClass().getName());
         } else {
             transaction.hide(currentFragment).show(targetFragment);
         }

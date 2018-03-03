@@ -31,11 +31,11 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/et_login_account"
+            android:id="@+id/et_login_studentId"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:background="#ffffffff"
-            android:hint="学号/手机号"
+            android:hint="学号"
             android:paddingLeft="20dp"
             android:textColor="#ff000000"
             android:textSize="14sp" />
@@ -46,12 +46,27 @@
             android:background="#11000000" />
 
         <EditText
-            android:id="@+id/et_login_password"
+            android:id="@+id/et_login_jwc_pwd"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:password="true"
             android:background="#ffffffff"
-            android:hint="密码"
+            android:hint="教务处密码"
+            android:paddingLeft="20dp"
+            android:textColor="#ff000000"
+            android:textSize="14sp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#11000000" />
+
+        <EditText
+            android:id="@+id/et_login_xyw_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:password="true"
+            android:background="#ffffffff"
+            android:hint="校园网密码"
             android:paddingLeft="20dp"
             android:textColor="#ff000000"
             android:textSize="14sp" />

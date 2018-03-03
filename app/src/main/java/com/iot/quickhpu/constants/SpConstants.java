@@ -7,5 +7,6 @@ package com.iot.quickhpu.constants;
  */
 
 public class SpConstants {
-
+    public static final String COOKIE = "cookie";
+    public static String IS_LOGIN = "login";
 }

@@ -3,14 +3,19 @@ package com.iot.quickhpu.fragment;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.widget.LinearLayout;
 
 import com.iot.quickhpu.R;
+import com.iot.quickhpu.activity.GradeActivity;
+import com.iot.quickhpu.activity.MainActivity;
 import com.iot.quickhpu.adapter.MainGridViewAdapter;
+import com.iot.quickhpu.utils.ActivityUtils;
 
 
 /**
@@ -27,12 +32,26 @@ public class FunctionFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_function, container, false);
-       /* Activity context = this.getActivity();
-        // 主页菜单栏
-        GridView mainGridView = view.findViewById(R.id.main_gridview);
-        mainGridView.setAdapter(new MainGridViewAdapter(context));*/
-        return view;
+
+        return inflater.inflate(R.layout.fragment_function, container, false);
     }
 
+    @Override
+    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+
+        super.onViewCreated(view, savedInstanceState);
+        final Activity context = getActivity();
+        // 主页菜单栏
+        //GridView mainGridView = view.findViewById(R.id.main_gridview);
+        //mainGridView.setAdapter(new MainGridViewAdapter(context));
+        LinearLayout grade = view.findViewById(R.id.ll_func_grade);
+        grade.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view.getId()==R.id.ll_func_grade){
+                    ActivityUtils.toAnotherActivity(context, GradeActivity.class);
+                }
+            }
+        });
+    }
 }
