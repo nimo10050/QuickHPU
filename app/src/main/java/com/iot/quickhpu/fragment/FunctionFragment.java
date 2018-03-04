@@ -13,6 +13,7 @@ import android.widget.LinearLayout;
 
 import com.iot.quickhpu.R;
 import com.iot.quickhpu.activity.GradeActivity;
+import com.iot.quickhpu.activity.GradeAllActivity;
 import com.iot.quickhpu.activity.MainActivity;
 import com.iot.quickhpu.adapter.MainGridViewAdapter;
 import com.iot.quickhpu.utils.ActivityUtils;
@@ -45,11 +46,21 @@ public class FunctionFragment extends Fragment {
         //GridView mainGridView = view.findViewById(R.id.main_gridview);
         //mainGridView.setAdapter(new MainGridViewAdapter(context));
         LinearLayout grade = view.findViewById(R.id.ll_func_grade);
+        LinearLayout gradeAll = view.findViewById(R.id.ll_func_grade_all);
         grade.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (view.getId()==R.id.ll_func_grade){
+                if (view.getId() == R.id.ll_func_grade) {
                     ActivityUtils.toAnotherActivity(context, GradeActivity.class);
+                }
+            }
+        });
+
+        gradeAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if (view.getId() == R.id.ll_func_grade_all) {
+                    ActivityUtils.toAnotherActivity(context, GradeAllActivity.class);
                 }
             }
         });
