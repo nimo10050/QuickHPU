@@ -21,7 +21,12 @@
         </activity>
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.GradeActivity" />
-        <activity android:name=".activity.GradeAllActivity"></activity>
+        <activity android:name=".activity.GradeAllActivity" />
+        <activity android:name=".activity.EmptyClassroomActivity" />
+        <activity android:name=".activity.StudentManagerActivity" />
+        <activity android:name=".activity.StudentDetailActivity" />
+        <activity android:name=".activity.InfoDetailActivity" />
+        <activity android:name=".activity.PublishTopicActivity"></activity>
     </application>
 
 </manifest>

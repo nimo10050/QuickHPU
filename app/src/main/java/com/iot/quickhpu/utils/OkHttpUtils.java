@@ -4,6 +4,7 @@ import com.iot.quickhpu.callback.LoginCallback;
 import com.iot.quickhpu.constants.LoginConstants;
 
 import java.io.IOException;
+import java.util.Map;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -38,14 +39,26 @@ public class OkHttpUtils {
     }
 
     // 获取数据源
-    public static void getDataByCookie(String url,Callback callback,String cookie){
+    public static void getDataByCookie(String url, Callback callback, String cookie) {
 
         Request request = new Request.Builder()
-                .url(url).addHeader("Cookie",cookie).build();
-        //LogUtils.d("开始回调");
+                .url(url)
+                .addHeader("Cookie", cookie)
+                .build();
+
         client.newCall(request).enqueue(callback);
     }
 
+    // 获取数据源
+    public static void getDataByCookieAndParams(String url, Callback callback, String cookie, String key, String value) {
+        url += "&" + key + "=" + value;
+        System.out.println(">>>>>>>>>空教室 url " + url);
+        Request request = new Request.Builder()
+                .url(url)
+                .addHeader("Cookie", cookie)
+                .build();
+        client.newCall(request).enqueue(callback);
+    }
 
     // 测试
     public static String getData1(String url) {
@@ -80,7 +93,9 @@ public class OkHttpUtils {
     public static String getByCookie(String url) {
 
         Request request = new Request.Builder()
-                .url(url).addHeader("Cookie", "PHPSESSID=eis8eumn6ncvf5qrip8kvusir5; expires=Tue, 06-Mar-2018 07:35:31 GMT; Max-Age=604800; path=/").build();
+                .url(url)
+                .addHeader("Cookie", "PHPSESSID=4656as6b5c9k4mbr59m1h3r713")
+                .build();
         client.newCall(request).enqueue(new Callback() {
             @Override
             public void onFailure(Call call, IOException e) {
@@ -90,7 +105,7 @@ public class OkHttpUtils {
             @Override
             public void onResponse(Call call, Response response) throws IOException {
                 if (response != null && response.code() == 200) {
-                   // LogUtils.i(response.body().string());
+
                     System.out.println("success>>>>>>>>>>>>>>>  " + response.body().string());
                 }
             }

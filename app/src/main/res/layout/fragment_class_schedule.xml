@@ -4,10 +4,11 @@
     android:layout_height="match_parent"
     tools:context="com.iot.quickhpu.fragment.ClassScheduleFragment">
 
-    <TextView
-        android:text="我是课程表页面"
+    <com.zhuangfei.timetable.core.TimetableView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center"/>
+        android:id="@+id/id_timetableView"
+        android:orientation="vertical">
+    </com.zhuangfei.timetable.core.TimetableView>
 
 </FrameLayout>
