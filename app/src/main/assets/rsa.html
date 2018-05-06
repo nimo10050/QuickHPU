@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+
+<head>
+<title></title>
+<script src="rsa.js"></script>
+<script src="md5.js"></script>
+<script src="jsbn.js"></script>
+<script src="prng4.js"></script>
+<script src="rng.js"></script>
+<script src="64sys.js"></script>
+<script type="text/javascript">
+
+function doEncrypt(str){
+	var rsa;
+	var key='D41F1B452440585C5D1F853C7CBCB2908CFF324B43A42D7D77D2BB28BD64E2D098079B477D23990E935386FF73CCF865E0D84CE64793306C4083EADECFE36BCC89873EC2BA37D6CA943CB03BA5B4369EE7E31C3539DEA67FF8BF4A5CEE64EB3FD0639E78044B12C7B1D07E86EB7BCF033F78947E0ADE5653B9A88B33AFEB53BD';
+	rsa = new RSAKey();
+	var exp = "65537";
+	rsa.setPublic(key, parseInt(exp).toString(16));
+	var res = rsa.encrypt(str);
+	if (res) {
+		return res;
+	}
+	return "";
+}
+console.log(doEncrypt('100012'))
+</script>
+</head>
+<body>
+	35cad53b24d2bfd4eb4e1c933815cc861db35b1d7e5edba307a3342527f85ab7c610370f8d2411cb19fe9d5507a4cef5bf8a9c401a369367115bf360a82fa5dab8b9cac37b279ab9a99caab8bc745f17cbb247cc0b22a2db1fd62854cff6b6b9e7ee438b3b330de32d810310b6625cea2619bfe3de869ad25ea5df8dfd2e2c0d
+</body>
+</html>
