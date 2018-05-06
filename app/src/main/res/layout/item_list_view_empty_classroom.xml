@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/list_view_item_empty_classroom"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/tv_class_number"
+        android:text="第一大节"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="30dp" />
+    <TextView
+        android:id="@+id/tv_empty_classroom_number"
+        android:text="xxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
+        android:textSize="15sp"
+        android:ellipsize= "none"
+        android:maxLines="100"
+        android:gravity="center"
+        android:scrollHorizontally="false"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

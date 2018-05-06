@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:padding="10dp"
+    android:background="#fff"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+   <ImageView
+        android:id="@+id/item_img_head"
+        android:src="@drawable/nav_myself"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        tools:ignore="ContentDescription" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="RtlHardcoded,RtlSymmetry">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tv_username"
+                android:text="username"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/google_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText" />
+            <TextView
+                android:id="@+id/tv_date"
+                android:text="date"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorPrimary"
+                android:layout_marginLeft="40dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:text="hello world!"
+            android:textColor="#000"
+            android:gravity="center"
+            android:textAllCaps="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:text="hello world!"
+            android:textColor="#000"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+</LinearLayout>
+

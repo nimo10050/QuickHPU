@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.iot.quickhpu.activity.InfoDetailActivity">
+
+    <TextView
+        android:id="@+id/tv_student_id"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/google_blue"
+        android:layout_height="1dp" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_student_name"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/google_blue"
+        android:layout_height="1dp"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_student_sex"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/google_blue"
+        android:layout_height="1dp"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_student_institute"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/google_blue"
+        android:layout_height="1dp"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_student_major"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/google_blue"
+        android:layout_height="1dp"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_student_grade"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/google_blue"
+        android:layout_height="1dp"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tv_student_studentClass"
+        android:layout_width="match_parent"
+        android:layout_height="40dp" />
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/google_blue"
+        android:layout_height="1dp"/>
+
+</LinearLayout>

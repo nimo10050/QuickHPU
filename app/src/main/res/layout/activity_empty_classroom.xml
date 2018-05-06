@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_number_1_building"
+        android:text="一号教学楼"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+    <View
+        android:background="@color/google_blue"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+    <TextView
+        android:id="@+id/tv_number_2_building"
+        android:text="2号教学楼"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+    <View
+        android:background="@color/google_blue"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        />
+    <TextView
+        android:id="@+id/tv_number_3_building"
+        android:text="3号教学楼"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+</LinearLayout>

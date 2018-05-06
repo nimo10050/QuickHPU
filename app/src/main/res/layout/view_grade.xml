@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="#80987654"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+   <ListView
+       android:id="@+id/list_view_grade_term"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content">
+   </ListView>
+
+   <TextView
+       android:gravity="center"
+       android:id="@+id/tv_close_dialog"
+       android:text="关闭"
+       android:layout_marginTop="20dp"
+       android:background="#550000ff"
+       android:layout_width="match_parent"
+       android:layout_height="40dp" />
+</LinearLayout>

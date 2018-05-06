@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="8dp"
+    android:id="@+id/list_view_item_grade"
+    android:layout_height="40dp">
+    <TextView
+        android:id="@+id/tv_subject_name"
+        android:text="语文"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/tv_subject_total"
+        android:text="80"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent" />
+</RelativeLayout>
