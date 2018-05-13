@@ -26,7 +26,10 @@
         <activity android:name=".activity.StudentManagerActivity" />
         <activity android:name=".activity.StudentDetailActivity" />
         <activity android:name=".activity.InfoDetailActivity" />
-        <activity android:name=".activity.PublishTopicActivity"></activity>
+        <activity android:name=".activity.PublishTopicActivity" />
+        <activity android:name=".activity.CreateSignActivity" />
+        <activity android:name=".activity.ClassManagerActivity" />
+        <activity android:name=".activity.CreateClassActivity"></activity>
     </application>
 
 </manifest>
