@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.iot.quickhpu.activity.CreateClassActivity">
+
+    <TextView
+        android:text="请输入班级名称"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+    <EditText
+        android:id="@+id/et_new_class_name"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+    <Button
+        android:id="@+id/btn_new_class"
+        android:text="立即创建"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+</LinearLayout>
