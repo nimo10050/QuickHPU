@@ -88,8 +88,17 @@ public class OkHttpUtils {
         return null;
     }
 
-    // post请求
-    // url
+    // 请求
+    public static void requestLocal(String url,Callback callback) {
+        Request request = new Request.Builder()
+                .url(url)
+                .build();
+
+        client.newCall(request).enqueue(callback);
+    }
+                // post请求
+                // url
+
     public static String getByCookie(String url) {
 
         Request request = new Request.Builder()
