@@ -78,7 +78,7 @@ public class InfoFragment extends Fragment implements View.OnClickListener{
             if (message.what==1){
                 String obj = (String)message.obj;
                 LogUtils.d(">>>>>>>>>>接收到用户信息>>>>" + obj);
-                 student = InfoJsonUtils.jsonToObject(obj);
+                student = InfoJsonUtils.jsonToObject(obj);
                 initInfoData(student);
                 ToastUtils.showShort(getActivity(),student.toString());
                 loadingDialog.dismiss();
