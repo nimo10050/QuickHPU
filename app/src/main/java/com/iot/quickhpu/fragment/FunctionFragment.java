@@ -1,37 +1,24 @@
 package com.iot.quickhpu.fragment;
 
 
-import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.GridView;
 import android.widget.LinearLayout;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONArray;
 import com.iot.quickhpu.R;
+import com.iot.quickhpu.activity.ClassManagerActivity;
 import com.iot.quickhpu.activity.EmptyClassroomActivity;
 import com.iot.quickhpu.activity.GradeActivity;
 import com.iot.quickhpu.activity.GradeAllActivity;
-import com.iot.quickhpu.activity.MainActivity;
+import com.iot.quickhpu.activity.SignActivity;
 import com.iot.quickhpu.activity.StudentManagerActivity;
-import com.iot.quickhpu.adapter.MainGridViewAdapter;
-import com.iot.quickhpu.pojo.Student;
 import com.iot.quickhpu.utils.ActivityUtils;
 import com.iot.quickhpu.utils.FileUtils;
-import com.iot.quickhpu.utils.JsonUtils;
 import com.iot.quickhpu.utils.LogUtils;
-import com.iot.quickhpu.utils.ToastUtils;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.List;
 
 
 /**
@@ -89,10 +76,11 @@ public class FunctionFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.ll_func_class_manager:// 班级管理
                 String json = FileUtils.readJsonFile(getActivity(), "test.json");
-                ActivityUtils.toAnotherActivityWithData(this.getActivity(), StudentManagerActivity.class,"studentInfo", json);
+                ActivityUtils.toAnotherActivityWithData(this.getActivity(), ClassManagerActivity.class,"studentInfo", json);
                 break;
             case R.id.ll_func_lesson_sign:// 课堂点名
                 LogUtils.d("课堂点名");
+                ActivityUtils.toAnotherActivity(getActivity(), SignActivity.class);
                 break;
         }
     }
