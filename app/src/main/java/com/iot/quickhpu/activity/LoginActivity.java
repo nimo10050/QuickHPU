@@ -82,6 +82,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     ActivityUtils.toAnotherActivity(LoginActivity.this,MainActivity.class);
                     // 保存用户信息
                     SpUtils.put(LoginActivity.this,SpConstants.IS_LOGIN,1);
+                    SpUtils.put(LoginActivity.this,SpConstants.USER_CODE,studentId);
                     SpUtils.put(LoginActivity.this,LoginConstants.LOGIN_COOKIE,message.obj);
                     // 销毁登录页面
                     finish();
