@@ -17,6 +17,7 @@ import com.iot.quickhpu.constants.SpConstants;
 import com.iot.quickhpu.service.LoginService;
 import com.iot.quickhpu.utils.ActivityUtils;
 import com.iot.quickhpu.utils.LogUtils;
+import com.iot.quickhpu.utils.NetUtils;
 import com.iot.quickhpu.utils.RSACryptographyUtils;
 import com.iot.quickhpu.utils.SpUtils;
 import com.iot.quickhpu.utils.ToastUtils;
@@ -36,7 +37,6 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     // 加载弹框
     AlertDialog loadingDialog;
 
-
     // 用户登录信息
     String studentId;
     String jwcPwd;
@@ -49,6 +49,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        // 网络诊断
+        if (!NetUtils.isConnected(this)){
+            ToastUtils.showLong(this,"网络连接失败,请检查重试");
+            return;
+        }
         inspectLogin();
     }
 
@@ -83,6 +88,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     // 保存用户信息
                     SpUtils.put(LoginActivity.this,SpConstants.IS_LOGIN,1);
                     SpUtils.put(LoginActivity.this,SpConstants.USER_CODE,studentId);
+                    // 用户姓名
                     SpUtils.put(LoginActivity.this,LoginConstants.LOGIN_COOKIE,message.obj);
                     // 销毁登录页面
                     finish();
