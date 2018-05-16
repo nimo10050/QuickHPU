@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.iot.quickhpu.activity.TopicDetailActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context="com.iot.quickhpu.activity.TopicDetailActivity">
+
+        <TextView
+            android:id="@+id/tv_detail_title"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="标题"
+            android:textAllCaps="true"
+            android:textSize="18sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_margin="20dp"
+            android:background="@color/google_blue" />
+
+        <TextView
+            android:id="@+id/tv_detail_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="内容少时诵诗书所所所所所"
+            android:textAllCaps="true"
+            android:textSize="15sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_detail_username"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="right"
+                android:text="用户名"
+                android:textAllCaps="true"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_detail_date"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="right"
+                android:text="日期"
+                android:textAllCaps="true"
+                android:textSize="14sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_show_comment"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1"
+            android:background="@color/google_blue"
+            android:gravity="center"
+            android:text="查看评论"
+            android:textAllCaps="true"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/btn_publish_comment"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_alignParentLeft="true"
+            android:layout_weight="1"
+            android:background="@color/google_yellow"
+            android:gravity="center"
+            android:text="发表评论"
+            android:textAllCaps="true"
+            android:textSize="14sp" />
+    </LinearLayout>
+</RelativeLayout>
