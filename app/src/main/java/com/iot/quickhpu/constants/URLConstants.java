@@ -28,13 +28,18 @@ public class URLConstants {
     public static final String EMPTY_CLASSROOM = BASE_URL + "?p=front&c=Classroom&a=API_getBuildingEmpty&key=" + KEY;
 
     // 本地服务器地址
-    public static final String LOCAL_URL = "http://192.168.31.216:8081/";
+    public static final String LOCAL_URL = "http://192.168.0.107:8081/";
 
     // 班级管理
     public static final String CLASS_MANAGER_URL = LOCAL_URL + "class/";
 
     // 学生管理
     public static final String STUDENT_MANAGER_URL = LOCAL_URL + "user/";
+
+    // 话题区
+    public static final String TOPIC_LIST_URL = LOCAL_URL + "topic/";
+    public static final String COMMENT_MANAGER_URL = LOCAL_URL + "comment/";
+
 
 
 }
