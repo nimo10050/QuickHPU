@@ -5,35 +5,44 @@ import java.io.Serializable;
 /**
  * @Author m1563
  * @Date 2018/5/1
- * @Description
+ * @Description 话题实体类
  */
 
 public class Topic implements Serializable {
 
-
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
-
-    private String id;
+    private String topicId;
     private String title;
     private String content;
+    private String userId;
     private String username;
     private String date;
+
+    public String getUserId() {
+        return userId;
+    }
+
+    public void setUserId(String userId) {
+        this.userId = userId;
+    }
 
     public Topic() {
     }
 
-    public Topic(String id,String title, String content, String username, String date) {
-        this.id = id;
+    public Topic(String topicId, String title, String content, String userId, String username, String date) {
+        this.topicId = topicId;
         this.title = title;
         this.content = content;
+        this.userId = userId;
         this.username = username;
         this.date = date;
+    }
+
+    public String getTopicId() {
+        return topicId;
+    }
+
+    public void setTopicId(String topicId) {
+        this.topicId = topicId;
     }
 
     public String getTitle() {
@@ -68,12 +77,13 @@ public class Topic implements Serializable {
         this.date = date;
     }
 
-
     @Override
     public String toString() {
         return "Topic{" +
-                "title='" + title + '\'' +
+                "topicId='" + topicId + '\'' +
+                ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
+                ", userId='" + userId + '\'' +
                 ", username='" + username + '\'' +
                 ", date='" + date + '\'' +
                 '}';
