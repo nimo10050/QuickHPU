@@ -1,29 +1,34 @@
 package com.iot.quickhpu.utils;
 
-import com.iot.quickhpu.callback.LoginCallback;
 import com.iot.quickhpu.constants.LoginConstants;
 
 import java.io.IOException;
-import java.util.Map;
 
 import okhttp3.Call;
 import okhttp3.Callback;
 import okhttp3.FormBody;
+import okhttp3.MediaType;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
+import okhttp3.RequestBody;
 import okhttp3.Response;
 
 /**
- * Created by m1563 on 2018/2/27.
- * 网络请求工具
+ * @作者 LOZON
+ * @日期 2018/5/15
+ * @描述 网络请求工具类
  */
-
 public class OkHttpUtils {
 
     private static OkHttpClient client = new OkHttpClient();
 
 
-    // 用户名、密码 登录
+    /**
+     * 登录表单请求
+     * @param url
+     * @param callback
+     * @param loginForm
+     */
     public static void login(String url, Callback callback, String... loginForm) {
 
         FormBody.Builder builder = new FormBody.Builder();
@@ -33,12 +38,15 @@ public class OkHttpUtils {
                 .build();
         Request request = new Request.Builder()
                 .url(url).post(form).build();
-        //LogUtils.d("开始回调");
         client.newCall(request).enqueue(callback);
-        //LogUtils.d("回调结束");
     }
 
-    // 获取数据源
+    /**
+     * GET 请求 远程服务器
+     * @param url
+     * @param callback
+     * @param cookie
+     */
     public static void getDataByCookie(String url, Callback callback, String cookie) {
 
         Request request = new Request.Builder()
@@ -49,8 +57,16 @@ public class OkHttpUtils {
         client.newCall(request).enqueue(callback);
     }
 
-    // 获取数据源
-    public static void getDataByCookieAndParams(String url, Callback callback, String cookie, String key, String value) {
+    /**
+     * GET 请求  携带参数
+     * @param url 请求接口
+     * @param callback 回调接口
+     * @param cookie cookie
+     * @param key 请求参数的键
+     * @param value 请求参数的值
+     */
+    public static void getDataByCookieAndParams(String url, Callback callback
+            , String cookie, String key, String value) {
         url += "&" + key + "=" + value;
         System.out.println(">>>>>>>>>空教室 url " + url);
         Request request = new Request.Builder()
@@ -60,45 +76,44 @@ public class OkHttpUtils {
         client.newCall(request).enqueue(callback);
     }
 
-    // 测试
-    public static String getData1(String url) {
-        Request request = new Request.Builder()
-                .url(url).get().build();
-        client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                System.out.println(">>>>>>>>>>>>>>>>> error");
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                if (response.code() == 200) {
-                    System.out.println("success>>>>>>>>>>>>>>>  " + response.body().string());
-                    System.out.println("success>>>>>>>>>>>>>>>  " + response.header("set-cookie"));
-
-                }
-            }
-
-        });
-        try {
-            Thread.sleep(5000);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    // 请求
-    public static void requestLocal(String url,Callback callback) {
+    /**
+     * GET请求
+     * @param url 请求接口
+     * @param callback 回调接口
+     */
+    public static void getWithoutParam(String url, Callback callback) {
         Request request = new Request.Builder()
                 .url(url)
                 .build();
 
         client.newCall(request).enqueue(callback);
     }
-                // post请求
-                // url
 
+
+    /**
+     * post请求
+     * 请求体为Json字符串
+     * @param url 请求接口
+     * @param json 请求参数
+     * @param callback 回调接口
+     */
+    public static void postWithJsonParam(String url, String json, Callback callback) {
+        MediaType mediaType = MediaType.parse("application/json; charset=utf-8");
+        RequestBody body = RequestBody.create(mediaType, json);
+        Request request = new Request.Builder()
+                .url(url)
+                .post(body)
+                .build();
+
+        client.newCall(request).enqueue(callback);
+    }
+
+
+    /**
+     * 测试
+     * @param url
+     * @return
+     */
     public static String getByCookie(String url) {
 
         Request request = new Request.Builder()
@@ -127,5 +142,6 @@ public class OkHttpUtils {
         }
         return null;
     }
+
 
 }
