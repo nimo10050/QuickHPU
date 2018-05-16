@@ -126,10 +126,9 @@
         >
         <LinearLayout
             android:id="@+id/ll_func_lesson_sign"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
             android:gravity="center"
             android:orientation="vertical">
             <ImageView
@@ -144,10 +143,10 @@
 
         <LinearLayout
             android:id="@+id/ll_func_class_manager"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:layout_marginLeft="18dp"
             android:orientation="vertical">
             <ImageView
                 android:src="@mipmap/ic_launcher"
@@ -161,10 +160,10 @@
 
         <LinearLayout
             android:id="@+id/ll_func_grade_all"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
             android:layout_height="match_parent"
             android:gravity="center"
-            android:layout_marginLeft="18dp"
             android:orientation="vertical">
             <ImageView
                 android:src="@mipmap/ic_launcher"
@@ -173,6 +172,24 @@
             <TextView
                 android:id="@+id/tv_func_grade_all"
                 android:text="历年成绩"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_func_grade_all"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+            <ImageView
+                android:src="@mipmap/ic_launcher"
+                android:layout_width="40dp"
+                android:layout_height="40dp" />
+            <TextView
+                android:id="@+id/tv_func_grade_all"
+                android:text="其他"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp" />
         </LinearLayout>
