@@ -3,6 +3,7 @@
     package="com.iot.quickhpu">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:name="android.support.multidex.MultiDexApplication"
@@ -29,7 +30,10 @@
         <activity android:name=".activity.PublishTopicActivity" />
         <activity android:name=".activity.CreateSignActivity" />
         <activity android:name=".activity.ClassManagerActivity" />
-        <activity android:name=".activity.CreateClassActivity"></activity>
+        <activity android:name=".activity.CreateClassActivity" />
+        <activity android:name=".activity.TopicDetailActivity" />
+        <activity android:name=".activity.CommentListActivity" />
+        <activity android:name=".activity.PublishCommentActivity"></activity>
     </application>
 
 </manifest>
