@@ -1,14 +1,20 @@
 <resources>
     <!--app 名称-->
     <string name="app_name">QuickHPU</string>
+    <string name="login_activity_head_desc">登录页默认头像</string>
+    <string name="login_activity_tv_studentId">学号</string>
+    <string name="login_activity_tv_jwc_password">教务处密码</string>
+    <string name="login_activity_tv_xyw_password">校园网密码</string>
+    <!--登录页面-->
+    <string name="login_activity_button">登    陆</string>
     <!--底部导航栏文字说明-->
     <string name="nav_title_class_schedule">课程表</string>
     <string name="nav_title_quanzi">话题圈</string>
     <string name="nav_title_function">发现</string>
     <string name="nav_title_myself">我的</string>
     <!--功能页功能分类标题-->
-    <string name="fun_title_study">学习相关</string>
-    <string name="fun_title_tools">工具</string>
+    <string name="fun_title_study">学习</string>
+    <string name="fun_title_tools">辅助</string>
     <!--功能页功能按钮-->
     <string name="fun_list_grade">查询成绩</string>
     <string name="fun_list_emptyroom">空教室</string>
@@ -20,4 +26,5 @@
     <string name="fun_list_calender">校历</string>
     <string name="fun_list_test">考试安排</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>
