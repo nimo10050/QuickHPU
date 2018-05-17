@@ -1,102 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:showDividers="end"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:showDividers="end">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="70dp"
-            android:paddingLeft="20dp"
-            android:gravity="center_vertical">
+            android:gravity="center_vertical"
+            android:paddingLeft="20dp">
+
             <View
-                android:background="@color/decorate_blue"
                 android:layout_width="5dp"
-                android:layout_height="20dp">
+                android:layout_height="20dp"
+                android:background="@color/decorate_blue">
             </View>
+
             <TextView
-                android:text="@string/fun_title_study"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
                 android:layout_marginLeft="10dp"
                 android:gravity="center"
-                android:layout_width="wrap_content"
-                android:layout_height="30dp" />
+                android:text="@string/fun_title_study" />
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="80dp"
-            >
+            android:layout_height="80dp">
+
             <LinearLayout
-                android:layout_width="0dp"
-                android:layout_weight="1"
                 android:id="@+id/ll_func_grade"
+                android:layout_width="0dp"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
-                    android:src="@mipmap/ic_launcher"
                     android:layout_width="40dp"
-                    android:layout_height="40dp" />
-                    <TextView
-                        android:id="@+id/tv_func_grade"
-                        android:text="本学期成绩"
-                        android:layout_width="wrap_content"
-                        android:layout_height="20dp" />
+                    android:layout_height="40dp"
+                    android:src="@mipmap/ic_launcher" />
+
+                <TextView
+                    android:id="@+id/tv_func_grade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:text="本学期成绩" />
             </LinearLayout>
 
 
-
             <LinearLayout
-                android:id="@+id/ll_func_empty_classroom"
+                android:id="@+id/ll_func_grade_all"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
-                    android:src="@mipmap/ic_launcher"
                     android:layout_width="40dp"
-                    android:layout_height="40dp" />
+                    android:layout_height="40dp"
+                    android:src="@mipmap/ic_launcher" />
+
                 <TextView
-                    android:text="空教室"
+                    android:id="@+id/tv_func_grade_all"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp" />
+                    android:layout_height="20dp"
+                    android:text="历年成绩" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_func_library"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
-                    android:src="@mipmap/ic_launcher"
                     android:layout_width="40dp"
-                    android:layout_height="40dp" />
+                    android:layout_height="40dp"
+                    android:src="@mipmap/ic_launcher" />
+
                 <TextView
-                    android:text="图书馆"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp" />
+                    android:layout_height="20dp"
+                    android:text="图书查询" />
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/ll_func_sport"
                 android:layout_width="0dp"
-                android:layout_weight="1"
                 android:layout_height="match_parent"
+                android:layout_weight="1"
                 android:gravity="center"
                 android:orientation="vertical">
+
                 <ImageView
-                    android:src="@mipmap/ic_launcher"
                     android:layout_width="40dp"
-                    android:layout_height="40dp" />
+                    android:layout_height="40dp"
+                    android:src="@mipmap/ic_launcher" />
+
                 <TextView
-                    android:text="体能测试"
                     android:layout_width="wrap_content"
-                    android:layout_height="20dp" />
+                    android:layout_height="20dp"
+                    android:text="体能测试" />
             </LinearLayout>
 
         </LinearLayout>
@@ -106,92 +120,102 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="70dp"
-        android:paddingLeft="20dp"
-        android:gravity="center_vertical">
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp">
+
         <View
-            android:background="@color/decorate_red"
             android:layout_width="5dp"
-            android:layout_height="20dp">
-        </View>
+            android:layout_height="20dp"
+            android:background="@color/decorate_red"></View>
+
         <TextView
-            android:text="@string/fun_title_tools"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
             android:layout_marginLeft="10dp"
             android:gravity="center"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp" />
+            android:text="@string/fun_title_tools" />
     </LinearLayout>
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        >
+        android:layout_height="80dp">
+
         <LinearLayout
             android:id="@+id/ll_func_lesson_sign"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
+
             <ImageView
-                android:src="@mipmap/ic_launcher"
                 android:layout_width="40dp"
-                android:layout_height="40dp" />
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_launcher" />
+
             <TextView
-                android:text="课堂点名"
                 android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+                android:layout_height="20dp"
+                android:text="课堂点名" />
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/ll_func_class_manager"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
+
             <ImageView
-                android:src="@mipmap/ic_launcher"
                 android:layout_width="40dp"
-                android:layout_height="40dp" />
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_launcher" />
+
             <TextView
-                android:text="班级管理"
                 android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+                android:layout_height="20dp"
+                android:text="班级管理" />
         </LinearLayout>
 
         <LinearLayout
-            android:id="@+id/ll_func_grade_all"
+            android:id="@+id/ll_func_empty_classroom"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
+
             <ImageView
-                android:src="@mipmap/ic_launcher"
                 android:layout_width="40dp"
-                android:layout_height="40dp" />
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_launcher" />
+
             <TextView
-                android:id="@+id/tv_func_grade_all"
-                android:text="历年成绩"
                 android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+                android:layout_height="20dp"
+                android:text="空教室" />
         </LinearLayout>
 
+
         <LinearLayout
-            android:id="@+id/ll_func_grade_all"
+            android:id="@+id/ll_func_school_news"
             android:layout_width="0dp"
-            android:layout_weight="1"
             android:layout_height="match_parent"
+            android:layout_weight="1"
             android:gravity="center"
             android:orientation="vertical">
+
             <ImageView
-                android:src="@mipmap/ic_launcher"
                 android:layout_width="40dp"
-                android:layout_height="40dp" />
+                android:layout_height="40dp"
+                android:src="@mipmap/ic_launcher" />
+
             <TextView
-                android:id="@+id/tv_func_grade_all"
-                android:text="其他"
+                android:id="@+id/tv_func_school_news"
                 android:layout_width="wrap_content"
-                android:layout_height="20dp" />
+                android:layout_height="20dp"
+                android:text="学校新闻" />
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
