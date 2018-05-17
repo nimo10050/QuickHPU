@@ -32,7 +32,7 @@ public class FileUtils {
         InputStream is = null;
         try {
             is = context.getResources().getAssets().open(filePath);
-            byte[] buff = new byte[1024];
+            byte[] buff = new byte[1024*10];
             int len = 0;
             int b = 0;
             String result = null;
