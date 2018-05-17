@@ -47,6 +47,7 @@
             android:id="@+id/tv_title"
             android:text="hello world!"
             android:textColor="#000"
+            android:textStyle="bold"
             android:gravity="center"
             android:textAllCaps="true"
             android:layout_width="wrap_content"
