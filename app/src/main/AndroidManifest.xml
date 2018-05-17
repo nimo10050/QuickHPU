@@ -33,7 +33,15 @@
         <activity android:name=".activity.CreateClassActivity" />
         <activity android:name=".activity.TopicDetailActivity" />
         <activity android:name=".activity.CommentListActivity" />
-        <activity android:name=".activity.PublishCommentActivity"></activity>
+        <activity android:name=".activity.PublishCommentActivity" />
+        <activity android:name=".activity.BaseActivity" />
+        <activity android:name=".activity.SchoolNewsActivity" />
+        <activity android:name=".activity.SchoolNewsDetailActivity" />
+        <activity android:name=".activity.SportGradeActivity" />
+        <activity android:name=".activity.LibraryActivity"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
     </application>
 
 </manifest>
