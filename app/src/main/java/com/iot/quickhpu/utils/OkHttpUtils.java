@@ -3,6 +3,7 @@ package com.iot.quickhpu.utils;
 import com.iot.quickhpu.constants.LoginConstants;
 
 import java.io.IOException;
+import java.text.Normalizer;
 
 import okhttp3.Call;
 import okhttp3.Callback;
@@ -22,7 +23,6 @@ public class OkHttpUtils {
 
     private static OkHttpClient client = new OkHttpClient();
 
-
     /**
      * 登录表单请求
      * @param url
@@ -38,6 +38,21 @@ public class OkHttpUtils {
                 .build();
         Request request = new Request.Builder()
                 .url(url).post(form).build();
+        client.newCall(request).enqueue(callback);
+    }
+
+
+    public static void postWithForm(String url,String cookie, Callback callback, String... forms) {
+
+        FormBody.Builder builder = new FormBody.Builder();
+        FormBody form = builder.add("name", forms[0])
+                .add("page", forms[1])
+                .build();
+        Request request = new Request.Builder()
+                .url(url)
+                .post(form)
+                .addHeader("Cookie", cookie)
+                .build();
         client.newCall(request).enqueue(callback);
     }
 
