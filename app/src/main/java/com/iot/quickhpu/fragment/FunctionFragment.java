@@ -14,7 +14,10 @@ import com.iot.quickhpu.activity.ClassManagerActivity;
 import com.iot.quickhpu.activity.EmptyClassroomActivity;
 import com.iot.quickhpu.activity.GradeActivity;
 import com.iot.quickhpu.activity.GradeAllActivity;
+import com.iot.quickhpu.activity.LibraryActivity;
+import com.iot.quickhpu.activity.SchoolNewsActivity;
 import com.iot.quickhpu.activity.SignActivity;
+import com.iot.quickhpu.activity.SportGradeActivity;
 import com.iot.quickhpu.activity.StudentManagerActivity;
 import com.iot.quickhpu.utils.ActivityUtils;
 import com.iot.quickhpu.utils.FileUtils;
@@ -24,11 +27,10 @@ import com.iot.quickhpu.utils.LogUtils;
 /**
  * @作者 lozon
  * @日期 2018/2/21
- * @描述 主页Fragment
+ * @描述 功能页 Fragment
  */
 public class FunctionFragment extends Fragment implements View.OnClickListener {
 
-    // private Context mContext;
 
     public FunctionFragment() {
 
@@ -45,20 +47,24 @@ public class FunctionFragment extends Fragment implements View.OnClickListener {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
 
         super.onViewCreated(view, savedInstanceState);
-        //mContext = getActivity();
-        // 主页菜单栏
-        //GridView mainGridView = view.findViewById(R.id.main_gridview);
-        //mainGridView.setAdapter(new MainGridViewAdapter(context));
+
         LinearLayout grade = view.findViewById(R.id.ll_func_grade);
         LinearLayout gradeAll = view.findViewById(R.id.ll_func_grade_all);
         LinearLayout emptyClassroom = view.findViewById(R.id.ll_func_empty_classroom);
         LinearLayout classManager = view.findViewById(R.id.ll_func_class_manager);
         LinearLayout lessonSign = view.findViewById(R.id.ll_func_lesson_sign);
+        LinearLayout schoolNews = view.findViewById(R.id.ll_func_school_news);
+        LinearLayout library = view.findViewById(R.id.ll_func_library);
+        LinearLayout sport = view.findViewById(R.id.ll_func_sport);
+
         grade.setOnClickListener(this);
         gradeAll.setOnClickListener(this);
         emptyClassroom.setOnClickListener(this);
         classManager.setOnClickListener(this);
         lessonSign.setOnClickListener(this);
+        schoolNews.setOnClickListener(this);
+        library.setOnClickListener(this);
+        sport.setOnClickListener(this);
     }
 
     @Override
@@ -75,13 +81,22 @@ public class FunctionFragment extends Fragment implements View.OnClickListener {
                 ActivityUtils.toAnotherActivity(this.getActivity(), EmptyClassroomActivity.class);
                 break;
             case R.id.ll_func_class_manager:// 班级管理
-                String json = FileUtils.readJsonFile(getActivity(), "test.json");
-                ActivityUtils.toAnotherActivityWithData(this.getActivity(), ClassManagerActivity.class,"studentInfo", json);
+                ActivityUtils.toAnotherActivity(this.getActivity(), ClassManagerActivity.class);
                 break;
             case R.id.ll_func_lesson_sign:// 课堂点名
                 LogUtils.d("课堂点名");
                 ActivityUtils.toAnotherActivity(getActivity(), SignActivity.class);
                 break;
+            case R.id.ll_func_school_news:// 校园新闻
+                ActivityUtils.toAnotherActivity(getActivity(), SchoolNewsActivity.class);
+                break;
+            case R.id.ll_func_library:// 图书查询
+                LogUtils.d("图书查询");
+                ActivityUtils.toAnotherActivity(getActivity(), LibraryActivity.class);
+                break;
+            case R.id.ll_func_sport://体能测试
+                LogUtils.d("体能测试");
+                ActivityUtils.toAnotherActivity(getActivity(), SportGradeActivity.class);
         }
     }
 
